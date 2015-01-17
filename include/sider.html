@@ -1,0 +1,50 @@
+<aside>
+
+    {% if site.configs.show_contacts %}
+    <!--展现联系方式 配置中show_contacts必须为yes-->
+    <div class="sider-item">
+
+        <h2>我也混迹在这里</h2>
+
+        <div class="social">                
+        {% if site.configs.weibo %}
+        <a href="" target="_blank" title="新浪微博：{{ site.configs.weibo}}"><img src="/t/icons/weibo.png" alt="{{ site.configs.weibo }}" /></a>
+        {% endif %}
+
+        {% if site.configs.weixin %}
+        <a href="" target="_blank" title="微信：{{ site.configs.weixin}}"><img src="/t/icons/weixin.png" alt="{{ site.configs.weixin }}" /></a>
+        {% endif %}
+
+        {% if site.configs.qq %}
+        <a href="" target="_blank" title="QQ：{{ site.configs.qq}}"><img src="/t/icons/qq.png" alt="{{ site.configs.qq }}" /></a>
+        {% endif %}
+
+        {% if site.configs.douban %}
+        <a href="" target="_blank" title="豆瓣：{{ site.configs.douban}}"><img src="/t/icons/douban.png" alt="{{ site.configs.douban }}" /></a>
+        {% endif %}
+
+        {% if site.configs.zhihu %}
+        <a href="http://zhihu.com/people/{{site.configs.zhihu}}" target="_blank" title="知乎：{{ site.configs.zhihu}}"><img src="/t/icons/zhihu.png" alt="{{ site.configs.zhihu }}" /></a>
+        {% endif %}
+
+        </div>
+    </div>
+    {% endif %}
+              
+    <div class="sider-item">
+        <h2>关于这个博客</h2>
+        <div>{{ site.content }}</div>
+    </div>
+
+    <div class="sider-item">
+        <h2>推荐书目</h2>
+        <div>
+            <ul>
+            <li><a href="">《失控》</a></li>
+            <li>《启示录》</li>
+            <li>《人人都是产品经理》</li>
+            </ul>
+        </div>
+    </div>
+        
+</aside>

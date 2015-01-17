@@ -1,0 +1,57 @@
+{% extends 'base.html' %}
+{% block title %}{{ site.title }}{% endblock %}
+
+{% block seo %}
+<link rel="canonical" href="{{post.url}}" />
+<meta name="description" content="{{ post.title }},{{ post.raw_content[:100]}}" />
+<meta name="keywords" content="{% for tag in post.tags %}{{ tag }},{% endfor %}" />
+{% endblock %}
+
+{% block css %}
+<link rel="stylesheet" href="/t/stylesheets/post.css" />
+<link rel="stylesheet" href="/t/stylesheets/highlight.css" />
+{% endblock %}
+
+
+
+{% block content %}
+
+<div class="article">
+    <p class="article-title">{{post.title}}</p>
+
+    <div class="article-meta">
+    发表于 {{post.date | date('%Y-%m-%d') }}&nbsp;&nbsp;
+    {% if post.tags %}
+    <span class="tags"> 标签：{% for tag in post.tags %} <a href="/tags/{{ tag }}">{{ tag }}</a> {% endfor %}
+    </span>
+    {% endif %}
+    </div>
+            
+    <div class="article-content">
+        {{ post| auto_content }}               
+    </div>
+            
+    <div class="comment">
+    <!-- 多说评论框 start -->
+    <div class="ds-thread" data-thread-key="" data-title="{{post.title}}" data-url=""></div>
+
+        <script type="text/javascript">
+        var duoshuoQuery = {short_name:"{{site.configs.duoshuo}}"};
+            (function() {
+                var ds = document.createElement('script');
+                ds.type = 'text/javascript';ds.async = true;
+                ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+                ds.charset = 'UTF-8';
+                (document.getElementsByTagName('head')[0] 
+                     || document.getElementsByTagName('body')[0]).appendChild(ds);
+            })();
+            </script>
+        <!-- 多说公共JS代码 end -->
+   
+    </div>
+
+</div>
+
+{% include 'include/pagenav.html' %}          
+       
+{% endblock %}
