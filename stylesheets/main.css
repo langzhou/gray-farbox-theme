@@ -205,6 +205,9 @@ aside{
     nav{
     background: #eee;
     }
+    nav li{
+    margin-right: 5%;
+    }
 
     footer{
     padding: 2% 2% 3% 2%;

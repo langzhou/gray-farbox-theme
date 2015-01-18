@@ -1,5 +1,5 @@
 {% extends 'base.html' %}
-{% block title %}{{ site.title }}{% endblock %}
+{% block title %}{{ post.title}} - {{ site.title }}{% endblock %}
 
 {% block seo %}
 <link rel="canonical" href="{{post.url}}" />
@@ -17,12 +17,13 @@
 {% block content %}
 
 <div class="article">
+
     <p class="article-title">{{post.title}}</p>
 
     <div class="article-meta">
     发表于 {{post.date | date('%Y-%m-%d') }}&nbsp;&nbsp;
     {% if post.tags %}
-    <span class="tags"> 标签：{% for tag in post.tags %} <a href="/tags/{{ tag }}">{{ tag }}</a> {% endfor %}
+    <span class="tags"> 标签：{% for tag in post.tags %} <a href="/tag/{{ tag }}">{{ tag }}</a> {% endfor %}
     </span>
     {% endif %}
     </div>
