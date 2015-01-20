@@ -39,10 +39,23 @@
 
     <!--Simple Markpad-->
     <div class="sidebar-item">
-        <h2>Simple MarkPad</h2>
+        <h2>Simple MarkPad 编辑器</h2>
         <div class="sidebar-content">
-            <p>非常棒的Markdown编辑器</p>
-            <p>主页：<a href="http://simple-markpad.qiniudn.com/" target="_blank">去看看</a></p>
+            <div id="simple-markpad">                    
+            <p class="jieshao">
+                <img src="/t/icons/simple-markpad.png" alt="">为Geek写作者们全新打造的Markdown文本编辑器</p>
+            <p class="url_btn"><a  href="http://simple-markpad.qiniudn.com/" target="_blank">去看看</a></p>
+            </div>
+        </div>
+    </div>
+
+    <div class="sidebar-item" id="search-box">
+        <h2>全文搜索</h2>
+        <div class="sidebar-content">
+            <form method="get" action="/search">
+                <input type="text" value="" name="keyword">
+                <input type="submit" value="搜索">
+            </form>
         </div>
     </div>
               
@@ -70,5 +83,7 @@
             </ul>
         </div>
     </div>
+
+
         
 </aside>

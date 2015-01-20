@@ -76,8 +76,8 @@ nav a{
     padding: 0 5px;
 }
 nav a:hover{
-    color:#111;
-    background: #cfcfcf;
+    color:#fff;
+    background: #222;
 }
 
 /** 侧边栏 **/
@@ -195,6 +195,51 @@ aside{
     list-style-position:inside;
 }
 
+/** simple markpad **/
+#simple-markpad{
+    font-size: 0.9em;
+}
+#simple-markpad img{
+    width: 45px;
+    height: 45px;
+    margin-right: 15px;
+    float: left;   
+    
+}
+
+.url_btn a{
+    display: inline-block;
+    border-radius: 3px;
+    background: #efefef;
+    border:1px solid #EEE;
+    padding: 2px 0px;
+    margin-top:15px;
+    width: 100%;
+    text-align: center;
+    
+}
+.url_btn a:hover{
+    background: #222;
+    color: #fff;
+}
+
+/** 搜索框 **/
+#search-box input[type='text']{
+    height: 26px;
+    padding: 2px;
+    border: 1px solid #eaeaea;
+    width: 190px;
+}
+#search-box input[type='submit']{
+    height: 30px;
+    width: 60px;
+    padding: 2px;
+    margin-left: 5px;
+    background: #efefef;
+    border: 1px solid #eee;
+
+
+}
 
 /*** mobile device styles **/
 @media screen and (max-width: 1015px) {
@@ -251,5 +296,9 @@ aside{
     padding: 0 2%;    
     margin: 0;    
     } 
+
+    #simple-markpad{
+        display: none;
+    }
 
 }
