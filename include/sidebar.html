@@ -1,0 +1,74 @@
+<aside>
+
+    <!-- 关于网站 -->
+    <div class="sidebar-item">
+        <h2>关于这个博客</h2>
+        <div class="sidebar-content">{{ site.content }}</div>
+    </div>
+
+    {% if site.configs.show_contacts %}
+    <!--展现联系方式 配置中show_contacts必须为yes-->
+    <div class="sidebar-item">
+
+        <h2>我也混迹在这里</h2>
+
+        <div class="social sidebar-content">                
+        {% if site.configs.weibo %}
+        <a href="" target="_blank" title="新浪微博：{{ site.configs.weibo}}"><img src="/t/icons/weibo.png" alt="{{ site.configs.weibo }}" /></a>
+        {% endif %}
+
+        {% if site.configs.weixin %}
+        <a href="" target="_blank" title="微信：{{ site.configs.weixin}}"><img src="/t/icons/weixin.png" alt="{{ site.configs.weixin }}" /></a>
+        {% endif %}
+
+        {% if site.configs.qq %}
+        <a href="" target="_blank" title="QQ：{{ site.configs.qq}}"><img src="/t/icons/qq.png" alt="{{ site.configs.qq }}" /></a>
+        {% endif %}
+
+        {% if site.configs.douban %}
+        <a href="" target="_blank" title="豆瓣：{{ site.configs.douban}}"><img src="/t/icons/douban.png" alt="{{ site.configs.douban }}" /></a>
+        {% endif %}
+
+        {% if site.configs.zhihu %}
+        <a href="http://zhihu.com/people/{{site.configs.zhihu}}" target="_blank" title="知乎：{{ site.configs.zhihu}}"><img src="/t/icons/zhihu.png" alt="{{ site.configs.zhihu }}" /></a>
+        {% endif %}
+
+        </div>
+    </div>
+    {% endif %}
+
+    <!--Simple Markpad-->
+    <div class="sidebar-item">
+        <h2>Simple MarkPad</h2>
+        <div class="sidebar-content">
+            <p>非常棒的Markdown编辑器</p>
+            <p>主页：<a href="http://simple-markpad.qiniudn.com/" target="_blank">去看看</a></p>
+        </div>
+    </div>
+              
+
+    <div class="sidebar-item">
+        <h2>经常浏览的网站</h2>
+        <div class="sidebar-content">
+            <ul>
+                <li><a href="http://wwww.huxiu.com" target="_blank">虎嗅网</a></li>
+                <li><a href="http://zhihu.com" target="_blank">知乎</a></li>
+                <li><a href="http://wwww.geekpark.net" target="_blank">极客公园</a></li>
+                <li><a href="http://www.infoq.com/cn/" target="_blank">InfoQ</a></li>
+                <li><a href="http://www.oschina.net/" target="_blank">开源中国</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="sidebar-item">
+        <h2>2015年愿望清单</h2>
+        <div class="sidebar-content">
+            <ul>
+                <li>学习Android设计</li>
+                <li>项目管理实践与学习</li>
+                <li>坚持写博客</li>
+                <li>一周至少3次运动</li>
+            </ul>
+        </div>
+    </div>
+        
+</aside>

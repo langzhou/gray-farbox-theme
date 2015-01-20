@@ -1,5 +1,5 @@
 .codehilite .hll { background-color: #ffffcc }
-.codehilite  { background: #f9f9f9;padding:10px; font-size: 14px;}
+.codehilite  { background: #f9f9f9;padding:10px; font-size: 1em;}
 .codehilite .c { color: #408080; font-style: italic } /* Comment */
 .codehilite .err { border: 1px solid #FF0000 } /* Error */
 .codehilite .k { color: #008000; font-weight: bold } /* Keyword */

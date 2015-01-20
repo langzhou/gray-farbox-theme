@@ -43,7 +43,7 @@ footer{
     border-top: 1px solid #eee;   
     font-size: 12px;
     color: #555;
-    background: #fbfbfb;
+    background: #f9f9f9;
 }
 
 footer a{
@@ -71,9 +71,9 @@ nav li{
 }
 nav a{
     text-decoration: none;
-    color:#333;
+    color:#222;
     display: list-item;
-    padding: 0 3px;
+    padding: 0 5px;
 }
 nav a:hover{
     color:#111;
@@ -85,26 +85,33 @@ nav a:hover{
 aside{
     float: left;
     max-width: 300px;
-    margin-left: 50px;
+    margin-left: 60px;
     padding-top: 15px;
 }
 
-.sider-item li{
+.sidebar-item{
+    width: 290px;
+    border:0px solid #f2f2f2;
+    background: #fbfbfb;
+    padding:0px;
+    margin-bottom: 35px;
+}
+
+.sidebar-item li{
     list-style: inside;
 }
 
-.sider-item{
-    width: 280px;
-    border-bottom:2px solid #EEE;
-    background: #fafafa;
-    padding:10px 15px;
-    margin-bottom: 35px;
-}
-.sider-item h2{
-    font-size: 18px;
+
+.sidebar-item h2{
+    font-size: 16px;
     color: #555;    
-    padding: 2px 0;
-    margin-bottom: 2px;
+    padding: 8px 10px;    
+    border-bottom: 2px solid #FFF;
+  
+}
+
+.sidebar-content{
+    padding: 10px;
 }
 
 /**通用wrap**/
@@ -145,6 +152,7 @@ aside{
     line-height: 25px;
     font-size: 14px;
     color:#999;
+    overflow-x:auto;
 }
 
 .article-content{
@@ -189,7 +197,7 @@ aside{
 
 
 /*** mobile device styles **/
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 1015px) {
     aside {
     float:none;
     clear: left;
@@ -206,7 +214,7 @@ aside{
     background: #eee;
     }
     nav li{
-    margin-right: 5%;
+    margin-right: 4%;
     }
 
     footer{
@@ -218,13 +226,19 @@ aside{
     padding-top: 20px;
     }
 
-    .sider-item{
-    width: inherit;
-    margin: 10px;
-    padding: 5px 0;
+    .sidebar-item{
+    width: inherit;  
+    padding: 0 2%;
     background: #fff;
     box-shadow: none;
 	border:none;
+    }
+
+    .sidebar-item h2{
+        padding: 0;
+    }
+    .sidebar-content{
+        padding: 0;
     }
 
     .nav-items{

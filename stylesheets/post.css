@@ -52,10 +52,18 @@
     border-bottom: 1px dotted #666;
     padding: 1px 2px;
 }
-.page-nav{
-
+.comment{
+    margin: 30px 0;
+}
+.eof{
+    text-align: center;
+    padding: 5px;
     margin: 10px 0;
-
+    font-size: 0.9em;
+    color:#999;
+}
+.page-nav{
+    margin: 10px 0;
 }
 .page-nav a{
     text-decoration: underline;
@@ -107,7 +115,7 @@ th,td{
 pre{
     display: block;
 padding: 10.5px;
-margin: 0 0 11px;
+margin: 0 ;
 font-size: 0.9em;
 line-height: 1.6;
 word-break: break-all;

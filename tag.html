@@ -1,5 +1,5 @@
 {% extends 'base.html' %}
-{% block title %}{{ site.title }} - 标签{% endblock %}
+{% block title %}{{ site.title }} - {{path2}}{% endblock %}
 
 
 {% block seo %}
@@ -9,6 +9,11 @@
 
 
 {% block content %}
+
+<!-- 获取标签名 -->
+{% if path2 %}
+<p style="margin-top:15px;"><span style="padding:5px;background:#efefef;">标签：{{path2}}</span></p>
+{% endif %}
 
 	{% for post in posts %}
 	<div class="article-items">
